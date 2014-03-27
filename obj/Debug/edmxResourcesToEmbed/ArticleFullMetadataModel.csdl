@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OagumDB.MetadataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="T_ArticleFullMeDa">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Creator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PubDate" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Publisher" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Identifier" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="PubLanguage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Relation" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EntryDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="ArticleFullMetadataContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_ArticleFullMeDa" EntityType="Self.T_ArticleFullMeDa" />
+  </EntityContainer>
+</Schema>

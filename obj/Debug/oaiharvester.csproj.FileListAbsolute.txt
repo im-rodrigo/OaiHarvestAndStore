@@ -1,0 +1,10 @@
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\bin\Debug\oaiharvester.exe.config
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\obj\Debug\oaiharvester.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\bin\Debug\oaiharvester.exe
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\bin\Debug\oaiharvester.pdb
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\obj\Debug\oaiharvester.exe
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\obj\Debug\oaiharvester.pdb
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\bin\Debug\EntityFramework.dll
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\bin\Debug\EntityFramework.xml
+C:\Users\Rodrigo\Documents\Visual Studio 2013\Projects\oaiharvester\oaiharvester\bin\Debug\EntityFramework.SqlServer.xml
