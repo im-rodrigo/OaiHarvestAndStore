@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OagumDB.AuthorSmallMetadataModelNS.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_AuthorSmallMeDa">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Title" Type="nvarchar" MaxLength="400" />
+    <Property Name="PubDate" Type="datetime" />
+    <Property Name="Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="Link" Type="nvarchar" MaxLength="400" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="OagumDBAuthorSmallMetadataModelNSStoreContainer">
+    <EntitySet Name="T_AuthorSmallMeDa" EntityType="Self.T_AuthorSmallMeDa" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

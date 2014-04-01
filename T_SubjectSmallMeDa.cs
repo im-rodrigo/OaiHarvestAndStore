@@ -12,19 +12,12 @@ namespace oaiharvester
     using System;
     using System.Collections.Generic;
     
-    public partial class T_ArticleFullMeDa
+    public partial class T_SubjectSmallMeDa
     {
-        public int ID { get; set; }
-        public string Creator { get; set; }
-        public Nullable<System.DateTime> PubDate { get; set; }
-        public string Description { get; set; }
-        public string Publisher { get; set; }
-        public string Identifier { get; set; }
-        public string PubLanguage { get; set; }
-        public string Relation { get; set; }
-        public string Subject { get; set; }
         public string Title { get; set; }
-        public string Type { get; set; }
-        public Nullable<System.DateTime> EntryDate { get; set; }
+        public Nullable<System.DateTime> PubDate { get; set; }
+        public string Subject { get; set; }
+        public string Link { get; set; }
+        public int ID { get; set; }
     }
 }

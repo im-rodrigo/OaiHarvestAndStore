@@ -25,6 +25,6 @@ namespace oaiharvester
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<T_ArticleFullMeDa> T_ArticleFullMeDa { get; set; }
+        //public virtual DbSet<T_ArticleFullMeDa> T_ArticleFullMeDa { get; set; }
     }
 }

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OagumDB.ArticleSmallMetadataNS" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ArticleSmallMetadataContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_ArticleSmallMeDa1" EntityType="OagumDB.ArticleSmallMetadataNS.T_ArticleSmallMeDa1" />
+  </EntityContainer>
+  <EntityType Name="T_ArticleSmallMeDa1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Title" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="PubDate" Type="DateTime" Precision="3" />
+    <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Link" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

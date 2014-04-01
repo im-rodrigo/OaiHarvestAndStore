@@ -65,6 +65,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArticleFullMetadataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ArticleSmallMetadataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArticleSmallMetadataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ArticleSmallMetadataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArticleSmallMetadataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ArticleSmallMetadataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArticleSmallMetadataModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="ArticleVeryFullMetadataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,14 +95,72 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArticleVeryFullMetadataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="AuthorSmallMetadataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthorSmallMetadataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorSmallMetadataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthorSmallMetadataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorSmallMetadataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuthorSmallMetadataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="harvestDOAJ.cs" />
+    <Compile Include="MegaTableSplit.cs" />
     <Compile Include="oai.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="T_ArticleFullMeDa.cs">
-      <DependentUpon>ArticleFullMetadataModel.tt</DependentUpon>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PublisherSmallMetadataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PublisherSmallMetadataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PublisherSmallMetadataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PublisherSmallMetadataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PublisherSmallMetadataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PublisherSmallMetadataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectSmallMetadataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubjectSmallMetadataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectSmallMetadataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubjectSmallMetadataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectSmallMetadataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubjectSmallMetadataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="T_ArticleSmallMeDa1.cs">
+      <DependentUpon>ArticleSmallMetadataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="T_ArticleVeryFullMeDa.cs">
       <DependentUpon>ArticleVeryFullMetadataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_AuthorSmallMeDa.cs">
+      <DependentUpon>AuthorSmallMetadataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_SubjectSmallMeDa.cs">
+      <DependentUpon>SubjectSmallMetadataModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +188,23 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ArticleVeryFullMetadataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="ArticleSmallMetadataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ArticleSmallMetadataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ArticleSmallMetadataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ArticleSmallMetadataModel.edmx</DependentUpon>
+      <LastGenOutput>ArticleSmallMetadataModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ArticleSmallMetadataModel.edmx.diagram">
+      <DependentUpon>ArticleSmallMetadataModel.edmx</DependentUpon>
+    </None>
+    <None Include="ArticleSmallMetadataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ArticleSmallMetadataModel.edmx</DependentUpon>
+      <LastGenOutput>ArticleSmallMetadataModel.cs</LastGenOutput>
+    </None>
     <None Include="ArticleVeryFullMetadataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ArticleVeryFullMetadataModel.edmx</DependentUpon>
@@ -128,7 +218,62 @@
       <DependentUpon>ArticleVeryFullMetadataModel.edmx</DependentUpon>
       <LastGenOutput>ArticleVeryFullMetadataModel.cs</LastGenOutput>
     </None>
+    <EntityDeploy Include="AuthorSmallMetadataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AuthorSmallMetadataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AuthorSmallMetadataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AuthorSmallMetadataModel.edmx</DependentUpon>
+      <LastGenOutput>AuthorSmallMetadataModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="AuthorSmallMetadataModel.edmx.diagram">
+      <DependentUpon>AuthorSmallMetadataModel.edmx</DependentUpon>
+    </None>
+    <None Include="AuthorSmallMetadataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AuthorSmallMetadataModel.edmx</DependentUpon>
+      <LastGenOutput>AuthorSmallMetadataModel.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="PublisherSmallMetadataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PublisherSmallMetadataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PublisherSmallMetadataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PublisherSmallMetadataModel.edmx</DependentUpon>
+      <LastGenOutput>PublisherSmallMetadataModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="PublisherSmallMetadataModel.edmx.diagram">
+      <DependentUpon>PublisherSmallMetadataModel.edmx</DependentUpon>
+    </None>
+    <None Include="PublisherSmallMetadataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PublisherSmallMetadataModel.edmx</DependentUpon>
+      <LastGenOutput>PublisherSmallMetadataModel.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="SubjectSmallMetadataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SubjectSmallMetadataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SubjectSmallMetadataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SubjectSmallMetadataModel.edmx</DependentUpon>
+      <LastGenOutput>SubjectSmallMetadataModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SubjectSmallMetadataModel.edmx.diagram">
+      <DependentUpon>SubjectSmallMetadataModel.edmx</DependentUpon>
+    </None>
+    <None Include="SubjectSmallMetadataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SubjectSmallMetadataModel.edmx</DependentUpon>
+      <LastGenOutput>SubjectSmallMetadataModel.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

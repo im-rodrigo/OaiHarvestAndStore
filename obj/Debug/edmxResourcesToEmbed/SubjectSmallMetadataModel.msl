@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OagumDBSubjectSmallMetadataNSStoreContainer" CdmEntityContainer="SubjectSmallMetadataContext">
+    <EntitySetMapping Name="T_SubjectSmallMeDa">
+      <EntityTypeMapping TypeName="OagumDB.SubjectSmallMetadataNS.T_SubjectSmallMeDa">
+        <MappingFragment StoreEntitySet="T_SubjectSmallMeDa">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="PubDate" ColumnName="PubDate" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
