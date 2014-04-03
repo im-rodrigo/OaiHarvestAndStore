@@ -20,7 +20,9 @@ namespace oaiharvester
         static void Main(string[] args)
         {
             MegaTableSplit splitbyauthor = new MegaTableSplit();
-            
+
+            //harvestDOAJ harvester = new harvestDOAJ();
+            //harvester.start();
             splitbyauthor.splitToAuthorSmall();
             splitbyauthor.splitToSubjectSmall();
         }

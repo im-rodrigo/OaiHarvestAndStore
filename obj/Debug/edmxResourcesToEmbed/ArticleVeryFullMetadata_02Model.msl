@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OagumDBArticleVeryFullMetadata_02NSStoreContainer" CdmEntityContainer="ArticleVeryFullMetadata_02Context">
+    <EntitySetMapping Name="T_ArticleVeryFullMeDa_02">
+      <EntityTypeMapping TypeName="OagumDB.ArticleVeryFullMetadata_02NS.T_ArticleVeryFullMeDa_02">
+        <MappingFragment StoreEntitySet="T_ArticleVeryFullMeDa_02">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="aSSN" ColumnName="aSSN" />
+          <ScalarProperty Name="bSSN" ColumnName="bSSN" />
+          <ScalarProperty Name="Creator" ColumnName="Creator" />
+          <ScalarProperty Name="ExtraId1" ColumnName="ExtraId1" />
+          <ScalarProperty Name="ExtraId2" ColumnName="ExtraId2" />
+          <ScalarProperty Name="PubDate" ColumnName="PubDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Publisher" ColumnName="Publisher" />
+          <ScalarProperty Name="PubLanguage" ColumnName="PubLanguage" />
+          <ScalarProperty Name="Relation" ColumnName="Relation" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

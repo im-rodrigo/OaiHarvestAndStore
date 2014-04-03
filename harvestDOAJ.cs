@@ -24,9 +24,9 @@ namespace oaiharvester
             ListIdentifier objIdentifier = new ListIdentifier();
 
             DateTime fromdate = new DateTime(2004, 1, 1);
-            for (int day = 26; day < 31; ++day)
+            for (int day = 1 ; day < 4; ++day)
             {
-                DateTime thisdate = new DateTime(2014, 3, day);
+                DateTime thisdate = new DateTime(2014, 4, day);
 
                 objRecord = objOAI.ListRecords("", fromdate.ToString("yyyy-MM-dd"), thisdate.ToString("yyyy-MM-dd"));
                 objIdentifier = objOAI.ListIdentifiers("");
@@ -39,9 +39,9 @@ namespace oaiharvester
                 foreach (var item in objRecord.record)
                 {
                     //per record, make a db context object to do an insert. 
-                    using (var db = new ArticleVeryFullMetadataContext())
+                    using (var db = new ArticleVeryFullMetadata_02Context())
                     {
-                        var articlemeda = new T_ArticleVeryFullMeDa();
+                        var articlemeda = new T_ArticleVeryFullMeDa_02();                        
 
                         Record rec = (Record)item;
                         OAI_DC metadatalist = (OAI_DC)rec.metadata;
@@ -49,12 +49,12 @@ namespace oaiharvester
                         foreach (var ttl in metadatalist.title)
                         {
                             tmpbuilder.Append(ttl.ToString());
-                            tmpbuilder.Append(", ");
+                            tmpbuilder.Append(" ");
 
                         }
                         try
                         {
-                            tmpbuilder.Remove(tmpbuilder.Length - 2, 2);
+                            tmpbuilder.Remove(tmpbuilder.Length - 1, 1);
                         }
                         catch (System.ArgumentOutOfRangeException e)
                         {
@@ -70,17 +70,17 @@ namespace oaiharvester
                             if (creator.ToString().Length < 40)
                             {
                                 tmpbuilder.Append(creator.ToString());
-                                tmpbuilder.Append(", ");
+                                tmpbuilder.Append("$");
                             }
                             else
                             {
                                 tmpbuilder.Append(creator.ToString().Substring(0, 40));
-                                tmpbuilder.Append(", ");
+                                tmpbuilder.Append("$");
                             }
                         }
                         try
                         {
-                            tmpbuilder.Remove(tmpbuilder.Length - 2, 2);
+                            tmpbuilder.Remove(tmpbuilder.Length - 1, 1);
                         }
                         catch (System.ArgumentOutOfRangeException e)
                         {
@@ -94,11 +94,11 @@ namespace oaiharvester
                         foreach (var desc in metadatalist.description)
                         {
                             tmpbuilder.Append(desc.ToString());
-                            tmpbuilder.Append(", ");
+                            tmpbuilder.Append(" ");
                         }
                         try
                         {
-                            tmpbuilder.Remove(tmpbuilder.Length - 2, 2);
+                            tmpbuilder.Remove(tmpbuilder.Length - 1, 1);
                         }
                         catch (System.ArgumentOutOfRangeException e)
                         {
@@ -112,11 +112,11 @@ namespace oaiharvester
                         foreach (var pub in metadatalist.publisher)
                         {
                             tmpbuilder.Append(pub.ToString());
-                            tmpbuilder.Append(", ");
+                            tmpbuilder.Append("$");
                         }
                         try
                         {
-                            tmpbuilder.Remove(tmpbuilder.Length - 2, 2);
+                            tmpbuilder.Remove(tmpbuilder.Length - 1, 1);
                         }
                         catch (System.ArgumentOutOfRangeException e)
                         {
@@ -161,11 +161,11 @@ namespace oaiharvester
                         foreach (var lang in metadatalist.language)
                         {
                             tmpbuilder.Append(lang.ToString());
-                            tmpbuilder.Append(", ");
+                            tmpbuilder.Append("$");
                         }
                         try
                         {
-                            tmpbuilder.Remove(tmpbuilder.Length - 2, 2);
+                            tmpbuilder.Remove(tmpbuilder.Length - 1, 1);
                         }
                         catch (System.ArgumentOutOfRangeException e)
                         {
@@ -199,17 +199,17 @@ namespace oaiharvester
                             if (sub.ToString().Length < 40)
                             {
                                 tmpbuilder.Append(sub.ToString());
-                                tmpbuilder.Append(", ");
+                                tmpbuilder.Append("$");
                             }
                             else
                             {
                                 tmpbuilder.Append(sub.ToString().Substring(0, 40));
-                                tmpbuilder.Append(", ");
+                                tmpbuilder.Append("$");
                             }
                         }
                         try
                         {
-                            tmpbuilder.Remove(tmpbuilder.Length - 2, 2);
+                            tmpbuilder.Remove(tmpbuilder.Length - 1, 1);
                         }
                         catch (System.ArgumentOutOfRangeException e)
                         {
@@ -223,11 +223,11 @@ namespace oaiharvester
                         foreach (var typ in metadatalist.type)
                         {
                             tmpbuilder.Append(typ.ToString());
-                            tmpbuilder.Append(", ");
+                            tmpbuilder.Append("$");
                         }
                         try
                         {
-                            tmpbuilder.Remove(tmpbuilder.Length - 2, 2);
+                            tmpbuilder.Remove(tmpbuilder.Length - 1, 1);
                         }
                         catch (System.ArgumentOutOfRangeException e)
                         {
@@ -269,7 +269,10 @@ namespace oaiharvester
                         //Console.WriteLine("PubDate: " + tmpbuilder.ToString());
                         tmpbuilder.Clear();
                         //2013-12-01T00:00:00Z
-                        db.T_ArticleVeryFullMeDa.Add(articlemeda);
+
+                        articlemeda.EntryDate = DateTime.Today; 
+
+                        db.T_ArticleVeryFullMeDa_02.Add(articlemeda);
 
                         try
                         {
@@ -330,7 +333,7 @@ namespace oaiharvester
                 }
 
             }
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
     }
